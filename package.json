@@ -2,6 +2,7 @@
   "name": "indie-game-guide",
   "version": "1.0.0",
   "description": "独立游戏赚钱指南 - 从零开发游戏到上线赚钱",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "vitepress dev",
