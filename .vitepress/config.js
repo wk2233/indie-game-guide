@@ -4,6 +4,7 @@ export default defineConfig({
   title: '独立游戏赚钱指南',
   description: '从零开发游戏到上线赚钱，个人开发者的实战路径',
   lang: 'zh-CN',
+  base: '/indie-game-guide/',
   ignoreDeadLinks: true,
 
   head: [
