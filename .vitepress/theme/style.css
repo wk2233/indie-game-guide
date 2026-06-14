@@ -1,0 +1,184 @@
+/* 游戏化视觉主题 - 独立游戏赚钱指南 */
+
+/* === CSS 变量（亮色游戏风） === */
+:root {
+  --vp-c-brand-1: #ff6b35;          /* 主色：活力橘 */
+  --vp-c-brand-2: #ff8c42;
+  --vp-c-brand-3: #ff5722;
+  --vp-c-brand-soft: rgba(255, 107, 53, 0.14);
+
+  --vp-c-bg: #fffdf7;               /* 暖白背景 */
+  --vp-c-bg-soft: #fff9f0;
+  --vp-c-bg-mute: #fef5e7;
+
+  --vp-c-text-1: #2d2438;
+  --vp-c-text-2: #5c5068;
+
+  /* 平台色 */
+  --platform-wechat: #07c160;
+  --platform-douyin: #ff0044;
+  --platform-tap: #00b4d8;
+  --platform-steam: #1a1a3e;
+
+  /* 排名色 */
+  --rank-gold: #ffb800;
+  --rank-silver: #a8b8c8;
+  --rank-bronze: #d4a574;
+}
+
+/* === 字体 === */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600;700;900&display=swap');
+
+body {
+  font-family: 'Noto Sans SC', -apple-system, sans-serif;
+}
+
+/* === 标题风格 === */
+h1 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #ff6b35, #ff0044);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* === 排名徽章 === */
+.rank-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 14px;
+}
+.rank-1 { background: #ffb800; color: #fff; }
+.rank-2 { background: #a8b8c8; color: #fff; }
+.rank-3 { background: #d4a574; color: #fff; }
+
+/* === 平台标签 === */
+.platform-tag {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+}
+.platform-wechat { background: var(--platform-wechat); }
+.platform-douyin { background: var(--platform-douyin); }
+.platform-tap { background: var(--platform-tap); }
+.platform-steam { background: var(--platform-steam); }
+
+/* === 数据速览卡片 === */
+.data-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  padding: 16px;
+  margin: 16px 0;
+  background: linear-gradient(135deg, #fef9f0, #fff5e6);
+  border: 2px solid #ffe0c0;
+  border-radius: 12px;
+}
+.data-card-item {
+  text-align: center;
+}
+.data-card-item .value {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #ff6b35;
+}
+.data-card-item .label {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 2px;
+}
+
+/* === 排行榜表格 === */
+.ranking-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 4px;
+}
+.ranking-table th {
+  padding: 10px 12px;
+  text-align: left;
+  font-size: 0.85rem;
+  color: #888;
+  border-bottom: 2px solid #eee;
+}
+.ranking-table td {
+  padding: 10px 12px;
+  background: #fafafa;
+  font-size: 0.95rem;
+}
+.ranking-table tr:first-child td { background: #fff9e6; }
+.ranking-table tr:nth-child(2) td { background: #f8f9fa; }
+.ranking-table tr:nth-child(3) td { background: #fdf5f0; }
+
+/* === 步骤清单 === */
+.step-list {
+  list-style: none;
+  padding: 0;
+}
+.step-list li {
+  padding: 10px 14px;
+  margin: 6px 0;
+  border-left: 4px solid #e0e0e0;
+  border-radius: 0 8px 8px 0;
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.step-list li.completed {
+  border-left-color: #07c160;
+  background: #f0fdf4;
+}
+.step-list li .step-check {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.step-list li.completed .step-check {
+  background: #07c160;
+  border-color: #07c160;
+}
+
+/* === 提示框 === */
+.callout {
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-left: 4px solid #ff6b35;
+  border-radius: 0 8px 8px 0;
+  background: #fff9f0;
+}
+.callout-title {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+/* === 平台入口卡片（首页用） === */
+.platform-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+.platform-card {
+  padding: 20px;
+  border-radius: 12px;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+.platform-card:hover { transform: translateY(-4px); }
+.platform-card.wechat { background: linear-gradient(135deg, #07c160, #06ad56); }
+.platform-card.douyin { background: linear-gradient(135deg, #ff0044, #e6003d); }
+.platform-card.tap { background: linear-gradient(135deg, #00b4d8, #0096b8); }
+.platform-card.steam { background: linear-gradient(135deg, #1a1a3e, #2d2d5e); }
