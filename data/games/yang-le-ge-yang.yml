@@ -1,0 +1,89 @@
+name: 羊了个羊
+platform: 微信小游戏
+platform_key: wechat
+genre: 消除
+sub_genre: 三消+社交
+release_date: 2022-09
+status: 运营中
+developer_type: 团队
+
+dev_team_size: 5
+dev_duration_months: 3
+dev_cost_estimate: 50000
+cost_breakdown:
+  engine: Cocos Creator
+  art_assets: 20000
+  sound: 5000
+  review_and_icp: 2000
+  server: 8000
+  marketing_launch: 15000
+  other: 0
+zero_cost_feasible: false
+
+monthly_revenue_estimate: 5000000
+revenue_model: 广告
+monetization:
+  - 激励视频广告
+  - Banner广告
+  - 插屏广告
+ad_ecpm: 8.5
+ad_fill_rate: 95
+arpu: 0.35
+arltv: 2.8
+
+dau_peak: 80000000
+mau: 120000000
+user_profile:
+  gender_ratio: "55:45"
+  age_main: "25-40"
+  city_tier: "三四线为主"
+  device_tier: "中低端安卓为主"
+retention:
+  d1: 35
+  d7: 12
+  d30: 4
+avg_play_time_min: 18
+share_rate: 12
+
+gameplay_summary: 三消+社交排名，每日一关，失败后分享复活
+success_factors:
+  - 社交裂变设计（省份排名+分享复活）
+  - 极高难度引发挑战欲和话题性
+  - 每日更新保持新鲜感
+  - 低门槛+高上限，覆盖面广
+failure_points:
+  - 热度下降快，生命周期短
+  - 抄袭争议影响口碑
+monetization_strategy: 广告为主，高峰期满屏广告→后期降低密度维持留存
+
+license_status: 无需版号
+icp_status: 已备案
+copyright_registered: true
+platform_review_difficulty: 中等
+platform_review_pitfalls:
+  - 广告组件放置位置需符合规范
+  - 分享文案不能诱导点击
+
+art_style: 卡通扁平
+art_quality_tier: 中等
+color_scheme: 明亮多彩
+character_design: Q版动物角色
+ui_style: 简洁+大按钮
+art_source: 外包+部分网素材
+audio_style: 轻松循环bgm+清脆音效
+audio_source: 免费素材库
+
+competitors:
+  - name: 消消乐之星
+    platform: 微信小游戏
+    revenue_comparison: 弱势
+    differentiator: 社交排名是核心差异
+genre_competition_level: 极高
+market_gap_analysis: 三消+强社交排名的结合在当时是空白
+
+dev_interview_available: true
+dev_key_takeaways:
+  - 社交裂变是微信生态最大的流量杠杆
+  - 难度设计要「看起来简单，实际上极难」才有话题
+  - 省份排名利用了地域认同，比好友排行更强
+tags: [爆款, 社交裂变, 消除, 休闲, 话题营销]

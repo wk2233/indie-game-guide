@@ -1,0 +1,17 @@
+name: 抖音小游戏
+key: douyin
+icon: 🎵
+mau: 6亿+
+threshold: 0元
+feature: 短视频导量红利
+ecpm_range: 3-10元
+revenue_models:
+  - 激励视频广告
+  - 直播引流
+  - 内购(IAP)
+dev_engines:
+  - Cocos Creator
+  - LayaAir
+  - Unity
+review_difficulty: 中等
+icp_required: true

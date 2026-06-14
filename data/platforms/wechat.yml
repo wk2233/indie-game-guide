@@ -1,0 +1,19 @@
+name: 微信小游戏
+key: wechat
+icon: 🟢
+mau: 5亿+
+threshold: 0元
+feature: 个人无需版号
+ecpm_range: 1-15元
+revenue_models:
+  - 激励视频广告
+  - Banner广告
+  - 插屏广告
+  - 内购(IAP)
+dev_engines:
+  - Cocos Creator
+  - LayaAir
+  - Unity
+  - 白鹭引擎
+review_difficulty: 中等
+icp_required: true

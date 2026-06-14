@@ -1,0 +1,18 @@
+name: TapTap
+key: tap
+icon: 📱
+mau: 5000万+
+threshold: 0元
+feature: 口碑驱动、独立游戏友好
+ecpm_range: N/A（以内购为主）
+revenue_models:
+  - 内购(IAP)
+  - 买断制
+  - 广告（少量）
+dev_engines:
+  - Unity
+  - Cocos Creator
+  - Godot
+  - Unreal
+review_difficulty: 较低
+icp_required: true

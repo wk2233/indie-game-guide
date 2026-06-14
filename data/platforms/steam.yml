@@ -1,0 +1,19 @@
+name: Steam
+key: steam
+icon: 🎮
+mau: 1.3亿+
+threshold: 100美元（Steam Direct）
+feature: 全球市场、买断制
+ecpm_range: N/A（以买断+IAP为主）
+revenue_models:
+  - 买断制
+  - DLC
+  - 内购(IAP)
+  - 季票
+dev_engines:
+  - Unity
+  - Godot
+  - Unreal
+  - GameMaker
+review_difficulty: 宽松
+icp_required: false
