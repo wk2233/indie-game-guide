@@ -435,3 +435,59 @@ a:not(.platform-card):not(.VPButton):hover {
   0%, 100% { box-shadow: 0 0 0 0 rgba(99,102,241,0.4); }
   50% { box-shadow: 0 0 0 12px rgba(99,102,241,0); }
 }
+
+/* === 鼠标追踪光效 === */
+#mouse-glow {
+  position: fixed;
+  top: 0; left: 0;
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(168,85,247,0.12) 0%, rgba(99,102,241,0.04) 40%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  will-change: transform;
+}
+
+/* === 滚动揭示动画 === */
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.revealed {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* 表格行逐个延迟揭示 */
+.ranking-table tbody tr {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.ranking-table.revealed tbody tr:nth-child(1) { transition-delay: 0s; opacity: 1; transform: translateX(0); }
+.ranking-table.revealed tbody tr:nth-child(2) { transition-delay: 0.06s; opacity: 1; transform: translateX(0); }
+.ranking-table.revealed tbody tr:nth-child(3) { transition-delay: 0.12s; opacity: 1; transform: translateX(0); }
+.ranking-table.revealed tbody tr:nth-child(4) { transition-delay: 0.18s; opacity: 1; transform: translateX(0); }
+.ranking-table.revealed tbody tr:nth-child(5) { transition-delay: 0.24s; opacity: 1; transform: translateX(0); }
+.ranking-table.revealed tbody tr:nth-child(6) { transition-delay: 0.30s; opacity: 1; transform: translateX(0); }
+.ranking-table.revealed tbody tr:nth-child(7) { transition-delay: 0.36s; opacity: 1; transform: translateX(0); }
+.ranking-table.revealed tbody tr:nth-child(8) { transition-delay: 0.42s; opacity: 1; transform: translateX(0); }
+.ranking-table.revealed tbody tr:nth-child(9) { transition-delay: 0.48s; opacity: 1; transform: translateX(0); }
+.ranking-table.revealed tbody tr:nth-child(10) { transition-delay: 0.54s; opacity: 1; transform: translateX(0); }
+
+/* === 页面进入动画 === */
+.VPHero .container {
+  animation: heroEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes heroEntrance {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.VPHero .actions {
+  animation: heroEntrance 0.8s 0.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
