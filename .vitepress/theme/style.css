@@ -491,3 +491,80 @@ a:not(.platform-card):not(.VPButton):hover {
 .VPHero .actions {
   animation: heroEntrance 0.8s 0.2s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
+
+/* ============================================
+   移动端响应式适配
+   ============================================ */
+@media (max-width: 768px) {
+  /* 粒子背景 — 移动端减少性能消耗 */
+  #particles-canvas { opacity: 0.2 !important; }
+
+  /* 鼠标光效 — 移动端直接隐藏 */
+  #mouse-glow { display: none !important; }
+
+  /* Hero 标题缩小 */
+  .VPHero .name { font-size: clamp(1.8rem, 6vw, 2.8rem) !important; }
+  .VPHero .text { font-size: clamp(1rem, 4vw, 1.5rem) !important; }
+  .VPHero .tagline { font-size: 0.9rem !important; }
+  h1 { font-size: 1.6rem !important; }
+  h2 { font-size: 1.3rem !important; }
+
+  /* 平台卡片 — 单列 */
+  .platform-cards {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  .platform-card {
+    padding: 20px 18px !important;
+    border-radius: 16px !important;
+  }
+  .platform-card:hover {
+    transform: none !important; /* 移动端禁用3D */
+  }
+  .platform-card::before { display: none !important; }
+
+  /* 数据卡片 — 2列 */
+  .data-card {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+    padding: 16px !important;
+  }
+  .data-card-item .value { font-size: 1.3rem !important; }
+
+  /* 排行榜 — 横向滚动 */
+  .ranking-table {
+    display: block !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+  }
+  .ranking-table th, .ranking-table td {
+    padding: 8px 10px !important;
+    font-size: 0.8rem !important;
+    white-space: nowrap;
+  }
+  .ranking-table tbody tr { opacity: 1; transform: none; }
+
+  /* 步骤清单 */
+  .step-list li {
+    padding: 12px 14px !important;
+    gap: 8px !important;
+  }
+
+  /* 禁用hover动画(触屏不适用) */
+  .ranking-table tbody tr:hover td {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* 更小屏幕进一步缩小 */
+  .data-card { grid-template-columns: repeat(2, 1fr) !important; gap: 8px !important; padding: 12px !important; }
+  .data-card-item .value { font-size: 1.1rem !important; }
+  .data-card-item .label { font-size: 0.7rem !important; }
+  .platform-card { padding: 16px 14px !important; }
+  .platform-card h3 { font-size: 1.1rem !important; }
+  .platform-card p { font-size: 0.8rem !important; }
+  .rank-badge { width: 24px; height: 24px; font-size: 12px; }
+}
